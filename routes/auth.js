@@ -22,10 +22,13 @@ route.post("/home/register",function(req,res){
 route.get("/home/login",function(req,res){
 	res.render("login");
 });
-route.post("/home/login",passport.authenticate("local",{
+route.post("/home/login",function(req,res,next){
+	passport.authenticate("local",{
 	successRedirect:"/home",
-	failureRedirect:"/home/login"
-}),function(req,res){
+	failureRedirect:"/home/login",
+	successFlash:"Welcome back "+req.body.username,
+	failureFlash:"Invalid Credentials"
+})(req,res);
 });
 route.get("/home/logout",function(req,res){
 	req.logout();

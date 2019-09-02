@@ -14,7 +14,7 @@ var commentRoute = require("./routes/comment");
 var authRoute = require("./routes/auth");
 var indexRoute = require("./routes/index");
 var flash = require("connect-flash");
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL,{useNewUrlParser:true});
 // mongoose.connect("mongodb+srv://pushkar:wwweee@cluster0-clob0.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
@@ -143,6 +143,6 @@ app.use(authRoute);
 // 	res.redirect("/home/login");
 // }
 		
-app.listen(process.env.PORT,process.env.IP,function(){
+app.listen(process.env.ABC,process.env.IP,function(){
 	console.log("SERVER STARTED");
 });
