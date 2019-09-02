@@ -1,0 +1,30 @@
+<% include partials/header.ejs%>
+<div class = "container text-center">
+	<div class="jumbotron mt-3">
+  <p class="display-3">Welcome To YelpCamp</p>
+  <p class= "lead">View our hand-picked campgrounds from all over the world</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" href="/home/new" role="button">Add New Campground</a>
+  </p>
+</div>
+	
+	<div class ="row">
+		<%display.forEach(function(result){%>
+		<div class ="col-lg-3">
+			<div class =  "mb-5 ">
+			<div>
+				<figure class="figure">
+  				<img src="<%=result.image%>" class="figure-img img-fluid rounded" >
+  				<figcaption class="figure-caption text-center font-weight-bold"><%=result.name%></figcaption>
+				<div class = "text-center my-3">
+					<a class = "btn btn-sm btn-primary" href = "/home/show/<%=result._id%>">Show More </a>
+				</div>	
+				</figure>
+			</div>
+			</div>
+		</div>
+		<%});%>
+	</div>	
+</div>
+<% include partials/footer.ejs %>
+

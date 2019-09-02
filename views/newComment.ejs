@@ -1,0 +1,25 @@
+<% include partials/header.ejs%>
+<div class = "my-3">
+<h1 class ="text-center">Add New Comment for <%=found.name%></h1>	
+</div>
+<div class = "container mt-3 px-5" style = "width:30%;">
+	<form method ="post" action = "/home/<%=found._id%>/comments">
+  <!-- <div class="form-group" >
+    <label for="exampleInputEmail1">Author</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Author" name = "comment[author]">
+  </div> -->
+  <div class="form-group">
+    <label for="exampleInputPassword1">Text</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Text" name = "comment[text]">
+  </div>
+	
+  <button type="submit" class="btn btn-primary ">Submit</button>
+</form>
+</div>
+
+
+
+
+
+
+<% include partials/footer.ejs %>

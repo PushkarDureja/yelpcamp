@@ -1,0 +1,13 @@
+div.margin{
+	margin-bottom:50px;
+}
+
+/* @media only screen and (max-width:1024px){
+	div.abc{
+		width:30%
+	}
+} */
+
+div.list-group{
+	width:93%;
+}

@@ -1,0 +1,32 @@
+<% include partials/header.ejs%>
+<div class = "my-3">
+<h1 class ="text-center">Edit Campground</h1>	
+</div>
+<div class = "container mt-3 px-5" style = "width:30%;">
+	<form method ="post" action = "/home/<%=found._id%>?_method=PUT">
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  value = "<%=found.name%>" name = "Camp[name]">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword2">Price</label>
+    <input type="text" class="form-control" id="exampleInputPassword2" value = "<%=found.price%>" name = "Camp[price]" min ="0.01" step = "0.01">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Image</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" value = "<%=found.image%>" name = "Camp[image]">
+  </div>
+	 <div class="form-group">
+    <label for="exampleInputdesk">Description</label>
+    <input type="text" class="form-control" id="exampleInputdesk" value = "<%=found.description%>" name = "Camp[description]">
+  </div>
+  <button type="submit" class="btn btn-primary ">Submit</button>
+</form>
+</div>
+
+
+
+
+
+
+<% include partials/footer.ejs %>

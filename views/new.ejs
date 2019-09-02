@@ -1,0 +1,32 @@
+<% include partials/header.ejs%>
+<div class = "my-3">
+<h1 class ="text-center">Add New Campground	</h1>	
+</div>
+<div class = "container mt-3 px-5" style = "width:30%;">
+	<form method ="post" action = "/home">
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Name" name = "Camp[name]">
+  </div>
+  <div class="form-group" >
+    <label for="exampleInputEmail2">Price</label>
+    <input type="text" class="form-control" id="exampleInputEmail2"  placeholder="Price" name = "Camp[price]" min = "0.01" step ="0.01">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Image</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Image Link" name = "Camp[image]">
+  </div>
+	 <div class="form-group">
+    <label for="exampleInputdesk">Description</label>
+    <input type="text" class="form-control" id="exampleInputdesk" placeholder="Description" name = "Camp[description]">
+  </div>
+  <button type="submit" class="btn btn-primary ">Submit</button>
+</form>
+</div>
+
+
+
+
+
+
+<% include partials/footer.ejs %>
