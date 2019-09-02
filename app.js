@@ -15,7 +15,7 @@ var authRoute = require("./routes/auth");
 var indexRoute = require("./routes/index");
 var flash = require("connect-flash");
 // mongoose.connect("mongodb://localhost/yelpCampground",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://pushkar:wwweee@cluster0-clob0.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://pushkar:wwweee@cluster0-clob0.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static('public'));
