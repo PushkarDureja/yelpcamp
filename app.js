@@ -143,6 +143,6 @@ app.use(authRoute);
 // 	res.redirect("/home/login");
 // }
 		
-app.listen(4000,process.env.IP,function(){
+app.listen(process.env.PORT,process.env.IP,function(){
 	console.log("SERVER STARTED");
 });
